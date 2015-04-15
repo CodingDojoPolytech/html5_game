@@ -34,8 +34,14 @@
 	var g = new Game();
 	var socket = io.connect('http://localhost:8081/');
 	socket.on('helloworld', function () {
+
 		console.log('helloworld');
 	});
+
+	document.addEventListener("keydown", function(event){
+		socket.emit("keyDown",event.keyCode);
+	});
+
 </script>
 
 </body>
