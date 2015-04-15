@@ -26,11 +26,16 @@
 <canvas id="gameView" width="300" height="300" style="border:1px solid green">
 </canvas>
 <br />
-<label>Vitesse des Goshts</label>
+<label>Vitesse des Ghosts <span style="color:red">ET PAS GOSHTS</span></label>
 <input type="range" id="interval" name="points" min="50" max="1000" value="250"/>
 
+<script src="http://localhost:8081/socket.io/socket.io.js"></script>
 <script type="application/javascript">
 	var g = new Game();
+	var socket = io.connect('http://localhost:8081/');
+	socket.on('helloworld', function () {
+		console.log('helloworld');
+	});
 </script>
 
 </body>
