@@ -27,9 +27,6 @@ var Ghost = Entity.extend({
 		//var r = Math.floor(Math.random()*4);
 		//this.moveEntity(37+r);
 
-		console.log("Position:", this.x, this.y);
-		console.log("Target:", targetVector);
-
 		this.moveVector(targetVector);
 	}
 });

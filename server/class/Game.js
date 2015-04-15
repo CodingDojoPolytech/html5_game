@@ -64,7 +64,7 @@ var Game = Class.extend({
 			for(var p=0;p<this.player.length;p++) {
 				if (this.ghosts[i].x == this.player[p].x && this.ghosts[i].y == this.player[p].y) {
 					clearInterval(this.inter);
-					alert(this.player[p].score);
+					//alert(this.player[p].score);
 					this.continue = false;
 				}
 			}
@@ -73,7 +73,7 @@ var Game = Class.extend({
 
 	},
 
-	addPlayer : function(id){
+	addPlayer: function(id){
 		var p = new Player(15,15,this, id);
 		this.player.push(p);
 	},

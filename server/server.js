@@ -24,14 +24,14 @@ io.on('connection', function (socket) {
 
     // first connexion, return uniqid + game
     socket.emit('uniqid', idclient);
-    //socket.emit('game')
+    socket.emit('game', game);
 
-    socket.on("keyDown", function(param){
+    /*socket.on("keyDown", function(param){
         console.log(param);
         game.movePlayer(idclient, param);
         //renvoi à tous les clients du jeu
         io.sockets.emit('usermove', game);
-    });
+    });*/
 
     //socket.on socket.emit socket.broadcast io.sockets.emit
 

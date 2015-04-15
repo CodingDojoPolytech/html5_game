@@ -40,6 +40,9 @@
 	socket.on('usermove', function (game) {
 		console.log(game);
 	});
+	socket.on('game',function(game){
+		console.log(game);
+	});
 	document.addEventListener("keydown", function(event){
 		socket.emit("keyDown",event.keyCode);
 	});

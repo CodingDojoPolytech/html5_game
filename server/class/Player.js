@@ -22,3 +22,5 @@ var Player = Entity.extend({
 		this.moveEntity(event.which);
 	}
 });
+
+module.exports = Player;
