@@ -1,5 +1,7 @@
 var Class = require("../Class");
 var Player = require("./Player");
+var Labyrinth = require("./Labyrinth");
+var Ghost = require("./Ghost");
 /**
  * Created by tom on 01/04/15.
  */
@@ -9,7 +11,8 @@ var Game = Class.extend({
 
 	init: function() {
 		this.labyrinth = new Labyrinth(30, 30, this);
-		this.player = new Array(); // Player(15, 15, this);
+
+		this.player = new Array();
 
 		this.ghosts = new Array();
 		this.ghosts.push(new Ghost(0, 0, this));
@@ -21,7 +24,7 @@ var Game = Class.extend({
 		this.continue = true;
 
 
-		this.context = document.getElementById("gameView").getContext("2d");
+		//this.context = document.getElementById("gameView").getContext("2d");
 		this.loop();
 	},
 
@@ -53,7 +56,7 @@ var Game = Class.extend({
 			var self = this;
 			setTimeout(function () {
 				self.loop();
-			}, $("#interval").val());
+			}, 250);
 		}
 	},
 	loose: function(){
@@ -71,7 +74,20 @@ var Game = Class.extend({
 	},
 
 	addPlayer : function(id){
-		this.player.push(new Player(15,15,this, id));
+		var p = new Player(15,15,this, id);
+		this.player.push(p);
+	},
+	movePlayer: function (id, keycode) {
+		//recherchen du player
+		for (var i = 0; i < this.player.length; i++) {
+			if(player[i].id == id){
+				//changer la position du player
+				var result;
+				result.which = keyCode;
+				player.move(result);
+			}
+		}
+
 	}
 });
 

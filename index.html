@@ -31,13 +31,15 @@
 
 <script src="http://localhost:8081/socket.io/socket.io.js"></script>
 <script type="application/javascript">
-	var g = new Game();
+	//var g = new Game();
 	var socket = io.connect('http://localhost:8081/');
 	socket.on('helloworld', function () {
 
 		console.log('helloworld');
 	});
-
+	socket.on('usermove', function (game) {
+		console.log(game);
+	});
 	document.addEventListener("keydown", function(event){
 		socket.emit("keyDown",event.keyCode);
 	});

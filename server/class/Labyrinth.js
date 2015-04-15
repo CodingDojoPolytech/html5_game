@@ -1,5 +1,5 @@
 var Class = require("../Class");
-
+var Obstacle = require("./Obstacle");
 
 /**
  * Created by tom on 01/04/15.
