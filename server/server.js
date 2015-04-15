@@ -19,7 +19,7 @@ io.on('connection', function (socket) {
 
     socket.on("keyDown", function(param){
         console.log(param);
-    })
+    });
 
     //socket.on socket.emit socket.broadcast io.sockets.emit
 

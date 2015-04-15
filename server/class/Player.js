@@ -6,10 +6,11 @@ var Entity = require("./Entity");
  */
 
 var Player = Entity.extend({
-	init: function(x,y,game) {
+	init: function(x,y,game, id) {
 		this._super(x,y,game);
 		this.score=0;
 		this.color = "red";
+		this.id=id;
 	},
 	/*
 	 gauche=37

@@ -1,4 +1,3 @@
-var Class = require("../class");
 /**
  * Created by tom on 01/04/15.
  */
